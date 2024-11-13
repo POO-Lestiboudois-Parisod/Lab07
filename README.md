@@ -23,7 +23,7 @@ Soit à évaluer l’expression (3.5 + 4) / (2.5
 - Appui de la touche +: évaluation du résultat intermédiaire 7.25.
 - Appui de la touche /: évaluation du résultat final 1.0344827586206897.
 
-![exemple_calculatrice](images/Calculatrice.png)
+![exemple_calculatrice](images/calculatrice.png)
 
 ### Remarques
 - MS (memory store) stocke en mémoire la valeur courante. MR (memory recall) permet de
@@ -46,7 +46,7 @@ Operator::execute() de l’opération associée et met à jour l’affichage de 
 graphique par l’invocation de sa méthode JCalculator::update().
 
 
-![Schema](images/Schema.png) <br/>
+![Schema](images/schema.png) <br/>
 Diagramme UML (incomplet) de l’application calculatrice
 
 Cette application est construite sur une variation du modèle de conception réutilisable (design
