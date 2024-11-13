@@ -13,6 +13,7 @@ out/
 .sts4-cache
 bin/
 .idea/
+*.iml
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
