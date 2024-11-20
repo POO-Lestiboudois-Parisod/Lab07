@@ -80,7 +80,7 @@ public class JCalculator extends JFrame
     addOperatorButton("MS", 1, 1, Color.RED, new MSOperator());
 
     // Backspace
-    addOperatorButton("<=", 2, 1, Color.RED, new Backspace());
+    addOperatorButton("<=", 2, 1, Color.RED, new BackspaceOperator());
 
     // Mise a zero de la valeur courante + suppression des erreurs
     addOperatorButton("CE", 3, 1, Color.RED, new CEOperator());

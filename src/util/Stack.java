@@ -7,12 +7,25 @@ public class Stack<T> {
     Node<T> head;
 
 
-    void insert(T t) {
+    public void insert(T t) {
 
     }
 
-    void remove(T t) {
+    public void remove(T t) {
 
+    }
+
+    public void clear() {
+
+    }
+
+    public T pop(){
+        return null;
+    }
+
+    public boolean isEmpty(){
+        //TODO
+        return false;
     }
 
     @Override
