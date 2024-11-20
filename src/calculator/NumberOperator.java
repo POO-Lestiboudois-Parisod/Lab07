@@ -1,9 +1,9 @@
 package calculator;
 
-public class Number extends Operator{
+public class NumberOperator extends Operator{
     private int value;
 
-    public Number(int value){
+    public NumberOperator(int value){
         this.value = value;
     }
 
