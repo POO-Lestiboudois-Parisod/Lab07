@@ -1,8 +1,8 @@
 package calculator;
 
 public class OperandOperator extends Operator {
-    private String operand;
-    public OperandOperator(String operand) {
+    private Operation operand;
+    public OperandOperator(Operation operand) {
         this.operand = operand;
     }
     @Override
