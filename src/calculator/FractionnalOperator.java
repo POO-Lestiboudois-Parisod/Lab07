@@ -1,4 +1,9 @@
 package calculator;
 
-public class FractionnalOperator {
+public class FractionnalOperator extends Operator {
+    public FractionnalOperator() {}
+    @Override
+    void execute() {
+
+    }
 }

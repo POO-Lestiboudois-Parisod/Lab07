@@ -1,4 +1,10 @@
 package calculator;
 
-public class EnterOperator {
+public class EnterOperator extends Operator {
+   public EnterOperator() {}
+
+    @Override
+    void execute() {
+
+    }
 }

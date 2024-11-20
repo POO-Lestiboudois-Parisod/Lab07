@@ -1,4 +1,9 @@
 package calculator;
 
-public class SquareOperator {
+public class SquareOperator extends Operator {
+    public SquareOperator() {}
+    @Override
+    void execute() {
+
+    }
 }

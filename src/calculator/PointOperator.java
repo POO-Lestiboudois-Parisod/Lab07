@@ -1,4 +1,10 @@
 package calculator;
 
-public class PointOperator {
+public class PointOperator extends Operator {
+
+    public PointOperator() {}
+    @Override
+    void execute() {
+
+    }
 }
