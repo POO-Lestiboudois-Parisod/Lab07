@@ -1,4 +1,11 @@
 package calculator;
 
-public class MSOperator {
+public class MSOperator extends Operator {
+
+    public MSOperator() {}
+    @Override
+    void execute() {
+
+
+    }
 }

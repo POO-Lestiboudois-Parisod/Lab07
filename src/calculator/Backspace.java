@@ -1,8 +1,7 @@
 package calculator;
 
-
-public class CEOperator extends Operator {
-    public CEOperator() {
+public class Backspace extends Operator {
+    public Backspace() {
 
     }
 

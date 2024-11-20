@@ -1,4 +1,11 @@
 package calculator;
 
-public class MROperator {
+public class MROperator extends Operator {
+
+    public MROperator() {}
+
+    @Override
+    void execute() {
+
+    }
 }

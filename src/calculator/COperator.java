@@ -1,4 +1,10 @@
 package calculator;
 
-public class COperator {
+public class COperator extends Operator {
+
+    public COperator() {}
+    @Override
+    void execute() {
+
+    }
 }

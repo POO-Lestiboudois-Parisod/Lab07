@@ -74,26 +74,26 @@ public class JCalculator extends JFrame
     constraints.gridwidth = 1; // reset width
 
     // Rappel de la valeur en memoire
-    addOperatorButton("MR", 0, 1, Color.RED, null);
+    addOperatorButton("MR", 0, 1, Color.RED, new MROperator());
 
     // Stockage d'une valeur en memoire
-    addOperatorButton("MS", 1, 1, Color.RED, null);
+    addOperatorButton("MS", 1, 1, Color.RED, new MSOperator());
 
     // Backspace
-    addOperatorButton("<=", 2, 1, Color.RED, null);
+    addOperatorButton("<=", 2, 1, Color.RED, new Backspace());
 
     // Mise a zero de la valeur courante + suppression des erreurs
-    addOperatorButton("CE", 3, 1, Color.RED, null);
+    addOperatorButton("CE", 3, 1, Color.RED, new CEOperator());
 
     // Comme CE + vide la pile
-    addOperatorButton("C",  4, 1, Color.RED, null);
+    addOperatorButton("C",  4, 1, Color.RED, new COperator());
 
     // Boutons 1-9
     for (int i = 1; i < 10; i++) 
       addOperatorButton(String.valueOf(i), (i - 1) % 3, 4 - (i - 1) / 3, 
-			Color.BLUE, null);
+			Color.BLUE, new NumberOperator(i));
     // Bouton 0
-    addOperatorButton("0", 0, 5, Color.BLUE, null);
+    addOperatorButton("0", 0, 5, Color.BLUE, new NumberOperator(0));
 
     // Changement de signe de la valeur courante
     addOperatorButton("+/-", 1, 5, Color.BLUE, null);
