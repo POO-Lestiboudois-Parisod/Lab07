@@ -2,6 +2,6 @@ package calculator;
 
 abstract class Operator
 {
-  private State state;
+  protected State state;
   abstract void execute();
 }

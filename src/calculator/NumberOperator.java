@@ -1,7 +1,7 @@
 package calculator;
 
 public class NumberOperator extends Operator{
-    private int value;
+    private final int value;
 
     public NumberOperator(int value){
         this.value = value;
@@ -9,6 +9,6 @@ public class NumberOperator extends Operator{
 
     @Override
     public void execute(){
-        //Ajouter value sur la stack
+        state.appendToCurrentValue((char)value);
     }
 }

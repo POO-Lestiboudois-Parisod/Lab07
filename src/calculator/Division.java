@@ -1,8 +1,8 @@
 package calculator;
 
-public class Division extends Operation{
+public class Division extends Operation<Double>{
     @Override
-    public int apply(int a, int b) {
+    public Double apply(Double a, Double b) {
         if(b!=0) {
             return a / b;
         }

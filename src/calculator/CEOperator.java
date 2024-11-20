@@ -8,6 +8,9 @@ public class CEOperator extends Operator {
 
     @Override
     void execute() {
-
+        if(state.hasError()){
+            state.resetError();
+        }
+        state.clearCurrentValue();
     }
 }

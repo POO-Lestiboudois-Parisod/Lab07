@@ -1,8 +1,8 @@
 package calculator;
 
-public class Multiplication  extends Operation{
+public class Multiplication  extends Operation<Double>{
     @Override
-    public int apply(int a, int b) {
+    public Double apply(Double a, Double b) {
         return a*b;
     }
 }

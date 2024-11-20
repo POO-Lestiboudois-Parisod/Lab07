@@ -1,6 +1,6 @@
 package calculator;
 
-public abstract class Operation {
+public abstract class Operation<T> {
 
-    public abstract int apply(int a, int b);
+    public abstract T apply(T a, T b);
 }

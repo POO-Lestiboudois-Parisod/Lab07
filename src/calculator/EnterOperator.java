@@ -5,6 +5,6 @@ public class EnterOperator extends Operator {
 
     @Override
     void execute() {
-
+        state.pushCurrentValue();
     }
 }

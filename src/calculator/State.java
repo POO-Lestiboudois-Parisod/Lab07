@@ -77,6 +77,16 @@ public class State {
         return error;
     }
 
+    public void negativeToPositive(){
+        currentValue = currentValue.substring(1, currentValue.length() - 1);
+    }
+    public  void positiveToNegative(){
+        currentValue = "-" + currentValue;
+    }
+
+    public void setCurrentValue(String currentValue) {
+        this.currentValue = currentValue;
+    }
 
 
 
