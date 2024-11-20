@@ -119,5 +119,7 @@ java Calculator
 > exit <enter>
 ```
 ## 6 Rendu
-Le rapport comprendra un diagramme des classes complet, une description des choix de
-conception (en particulier pour les classes Operator et State) et la liste des tests effectués.
+Le rapport comprendra :
+- un diagramme des classes complet
+- une description des choix deconception (en particulier pour les classes Operator et State)
+- la liste des tests effectués.
