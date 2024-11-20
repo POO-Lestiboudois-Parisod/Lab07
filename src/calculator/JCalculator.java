@@ -96,24 +96,24 @@ public class JCalculator extends JFrame
     addOperatorButton("0", 0, 5, Color.BLUE, new NumberOperator(0));
 
     // Changement de signe de la valeur courante
-    addOperatorButton("+/-", 1, 5, Color.BLUE, null);
+    addOperatorButton("+/-", 1, 5, Color.BLUE, new PositiveNegativeOperator());
 
     // Operateur point (chiffres apres la virgule ensuite)
-    addOperatorButton(".", 2, 5, Color.BLUE, null);
+    addOperatorButton(".", 2, 5, Color.BLUE, new PointOperator());
 
     // Operateurs arithmetiques a deux operandes: /, *, -, +
-    addOperatorButton("/", 3, 2, Color.RED, null);
-    addOperatorButton("*", 3, 3, Color.RED, null);
-    addOperatorButton("-", 3, 4, Color.RED, null);
-    addOperatorButton("+", 3, 5, Color.RED, null);
+    addOperatorButton("/", 3, 2, Color.RED, new OperandOperator("/"));
+    addOperatorButton("*", 3, 3, Color.RED, new OperandOperator("*"));
+    addOperatorButton("-", 3, 4, Color.RED, new OperandOperator("-"));
+    addOperatorButton("+", 3, 5, Color.RED, new OperandOperator("+"));
 
     // Operateurs arithmetiques a un operande: 1/x, x^2, Sqrt
-    addOperatorButton("1/x", 4, 2, Color.RED, null);
-    addOperatorButton("x^2", 4, 3, Color.RED, null);
-    addOperatorButton("Sqrt", 4, 4, Color.RED, null);
+    addOperatorButton("1/x", 4, 2, Color.RED, new FractionnalOperator());
+    addOperatorButton("x^2", 4, 3, Color.RED, new SquareOperator());
+    addOperatorButton("Sqrt", 4, 4, Color.RED, new SqrtOperator());
 
     // Entree: met la valeur courante sur le sommet de la pile
-    addOperatorButton("Ent", 4, 5, Color.RED, null);
+    addOperatorButton("Ent", 4, 5, Color.RED, new EnterOperator());
 
     // Affichage de la pile
     JLabel jLabel = new JLabel("Stack");
