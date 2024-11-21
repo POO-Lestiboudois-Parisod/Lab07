@@ -1,6 +1,5 @@
 package util;
 
-
 import java.util.NoSuchElementException;
 
 public class It<T> {
