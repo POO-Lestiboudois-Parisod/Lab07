@@ -1,13 +1,14 @@
 package calculator;
 
-public class MSOperator extends MemoryOperator {
+public class MSOperator extends Operator {
 
     public MSOperator(State state) {
         super(state);
     }
     @Override
     public void execute() {
-        super.setMemory(Double.parseDouble(state.getCurrentValue()));
+        state.setMemory(Double.parseDouble(state.getCurrentValue()));
+        System.out.println("enregistré: "+ state.getMemory());
         //state.clearCurrentValue();
 
     }

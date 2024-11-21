@@ -6,6 +6,7 @@ public class State {
     private final Stack<Double> stack = new Stack<>();
     private String currentValue = "0";
     private boolean error = false;
+    private Double memory;
 
 
     public State() {
@@ -92,6 +93,13 @@ public class State {
 
     public Stack<Double> getStack() {
         return stack;
+    }
+
+    public Double getMemory() {
+        return memory;
+    }
+    public void setMemory(Double memory) {
+        this.memory = memory;
     }
 
 
