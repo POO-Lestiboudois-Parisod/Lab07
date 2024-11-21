@@ -8,20 +8,19 @@ public class State {
     private boolean error;
 
 
-    public State(){
-        stack = new Stack<Double>();
+    public State() {
+        stack = new Stack<>();
         currentValue = "0";
-        error =false;
+        error = false;
     }
 
-    public void appendToCurrentValue(char c){
-        if(error){
+    public void appendToCurrentValue(char c) {
+        if (error) {
             resetError();
         }
-        if(currentValue.equals("0")){
+        if (currentValue.equals("0")) {
             currentValue = Character.toString(c);
-        }
-        else{
+        } else {
             currentValue += c;
         }
     }
@@ -34,18 +33,20 @@ public class State {
         }
     }
 
-    public void clearCurrentValue(){
+    public void clearCurrentValue() {
         currentValue = "0";
     }
-    public void pushCurrentValue(){
-        try{
+
+    public void pushCurrentValue() {
+        try {
             double value = Double.parseDouble(currentValue);
             stack.insert(value);
             clearCurrentValue();
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println("Error in pushCurrentValue");
         }
     }
+
     public void setError(String message) {
         error = true;
         currentValue = "Erreur";
@@ -56,31 +57,32 @@ public class State {
         clearCurrentValue();
     }
 
-    public Double popFromStack(){
-        if(!stack.isEmpty()){
+    public Double popFromStack() {
+        if (!stack.isEmpty()) {
             return stack.pop();
-        }
-        else{
+        } else {
             System.out.println("Error in popFromStack");
             return null;
         }
     }
 
-    public void clearStack(){
+    public void clearStack() {
         stack.clear();
     }
 
-    public String getCurrentValue(){
+    public String getCurrentValue() {
         return currentValue;
     }
+
     public boolean hasError() {
         return error;
     }
 
-    public void negativeToPositive(){
+    public void negativeToPositive() {
         currentValue = currentValue.substring(1, currentValue.length() - 1);
     }
-    public  void positiveToNegative(){
+
+    public void positiveToNegative() {
         currentValue = "-" + currentValue;
     }
 
@@ -88,11 +90,9 @@ public class State {
         this.currentValue = currentValue;
     }
 
-
-
-
-
-
+    public Stack<Double> getStack() {
+        return stack;
+    }
 
 
 }
