@@ -2,7 +2,9 @@ package calculator;
 
 public class PositiveNegativeOperator extends Operator {
 
-    public PositiveNegativeOperator() {}
+    public PositiveNegativeOperator(State state) {
+        super(state);
+    }
     @Override
     public void execute() {
         if(state.getCurrentValue().indexOf(0) == '-'){

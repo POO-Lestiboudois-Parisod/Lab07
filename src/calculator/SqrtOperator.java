@@ -1,7 +1,10 @@
 package calculator;
 
 public class SqrtOperator extends Operator {
-    public SqrtOperator() {}
+    public SqrtOperator(State state) {
+        super(state);
+    }
+
     @Override
     public void execute() {
         if (state.hasError()) return;

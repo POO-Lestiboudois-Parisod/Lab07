@@ -5,7 +5,8 @@ import java.sql.SQLOutput;
 public class NumberOperator extends Operator {
     private final int value;
 
-    public NumberOperator(int value) {
+    public NumberOperator(int value, State state) {
+       super(state);
         this.value = value;
     }
 

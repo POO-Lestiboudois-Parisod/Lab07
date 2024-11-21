@@ -3,7 +3,9 @@ package calculator;
 public class MemoryOperator extends Operator {
     private Double memory;
 
-    public MemoryOperator() {}
+    public MemoryOperator(State state) {
+        super(state);
+    }
     @Override
     public void execute() {
     }

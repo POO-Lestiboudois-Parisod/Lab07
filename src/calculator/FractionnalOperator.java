@@ -1,7 +1,9 @@
 package calculator;
 
 public class FractionnalOperator extends Operator {
-    public FractionnalOperator() {}
+    public FractionnalOperator(State state) {
+        super(state);
+    }
     @Override
     public void execute() {
         if (state.hasError()) return;

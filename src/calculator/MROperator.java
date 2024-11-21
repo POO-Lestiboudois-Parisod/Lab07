@@ -2,7 +2,9 @@ package calculator;
 
 public class MROperator extends MemoryOperator {
 
-    public MROperator() {}
+    public MROperator(State state) {
+        super(state);
+    }
 
     @Override
     public void execute() {

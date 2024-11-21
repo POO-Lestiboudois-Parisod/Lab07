@@ -2,8 +2,8 @@ package calculator;
 
 
 public class CEOperator extends Operator {
-    public CEOperator() {
-
+    public CEOperator(State state) {
+        super(state);
     }
 
     @Override

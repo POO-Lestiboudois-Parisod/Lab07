@@ -2,7 +2,8 @@ package calculator;
 
 public class OperandOperator extends Operator {
     private final Operation<Double> operand;
-    public OperandOperator(Operation<Double> operand) {
+    public OperandOperator(Operation<Double> operand, State state) {
+        super(state);
         this.operand = operand;
     }
     @Override

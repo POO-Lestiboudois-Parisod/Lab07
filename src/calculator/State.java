@@ -5,14 +5,15 @@ import util.Stack;
 public class State {
     private final Stack<Double> stack = new Stack<>();
     private String currentValue = "0";
-    private boolean error;
+    private boolean error = false;
 
 
     public State() {
-        error = false;
     }
 
     public void appendToCurrentValue(char c) {
+        System.out.println("test current_value: "+currentValue.equals("0"));
+
         if (error) {
             resetError();
         }

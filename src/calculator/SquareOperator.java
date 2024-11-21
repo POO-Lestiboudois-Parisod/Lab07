@@ -1,7 +1,9 @@
 package calculator;
 
 public class SquareOperator extends Operator {
-    public SquareOperator() {}
+    public SquareOperator(State state) {
+        super(state);
+    }
     @Override
     public void execute() {
         if (state.hasError()) return;

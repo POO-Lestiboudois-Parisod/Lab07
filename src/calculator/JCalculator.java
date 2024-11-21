@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -36,6 +38,7 @@ public class JCalculator extends JFrame {
     private void update() {
         // Modifier une zone de texte, JTextField.setText(string nom)
         // Modifier un composant liste, JList.setListData(Object[] tableau)
+      System.out.println(state.getCurrentValue());
         jNumber.setText(state.getCurrentValue());
         Object[] stackData = state.getStack().toArray();
         if (stackData.length == 0) {
@@ -80,46 +83,46 @@ public class JCalculator extends JFrame {
         constraints.gridwidth = 1; // reset width
 
         // Rappel de la valeur en memoire
-        addOperatorButton("MR", 0, 1, Color.RED, new MROperator());
+        addOperatorButton("MR", 0, 1, Color.RED, new MROperator(state));
 
         // Stockage d'une valeur en memoire
-        addOperatorButton("MS", 1, 1, Color.RED, new MSOperator());
+        addOperatorButton("MS", 1, 1, Color.RED, new MSOperator(state));
 
         // Backspace
-        addOperatorButton("<=", 2, 1, Color.RED, new BackspaceOperator());
+        addOperatorButton("<=", 2, 1, Color.RED, new BackspaceOperator(state));
 
         // Mise a zero de la valeur courante + suppression des erreurs
-        addOperatorButton("CE", 3, 1, Color.RED, new CEOperator());
+        addOperatorButton("CE", 3, 1, Color.RED, new CEOperator(state));
 
         // Comme CE + vide la pile
-        addOperatorButton("C", 4, 1, Color.RED, new COperator());
+        addOperatorButton("C", 4, 1, Color.RED, new COperator(state));
 
         // Boutons 1-9
         for (int i = 1; i < 10; i++)
             addOperatorButton(String.valueOf(i), (i - 1) % 3, 4 - (i - 1) / 3,
-                    Color.BLUE, new NumberOperator(i));
+                    Color.BLUE, new NumberOperator(i, state));
         // Bouton 0
-        addOperatorButton("0", 0, 5, Color.BLUE, new NumberOperator(0));
+        addOperatorButton("0", 0, 5, Color.BLUE, new NumberOperator(0, state));
 
         // Changement de signe de la valeur courante
-        addOperatorButton("+/-", 1, 5, Color.BLUE, new PositiveNegativeOperator());
+        addOperatorButton("+/-", 1, 5, Color.BLUE, new PositiveNegativeOperator(state));
 
         // Operateur point (chiffres apres la virgule ensuite)
-        addOperatorButton(".", 2, 5, Color.BLUE, new PointOperator());
+        addOperatorButton(".", 2, 5, Color.BLUE, new PointOperator(state));
 
         // Operateurs arithmetiques a deux operandes: /, *, -, +
-        addOperatorButton("/", 3, 2, Color.RED, new OperandOperator(new Division()));
-        addOperatorButton("*", 3, 3, Color.RED, new OperandOperator(new Multiplication()));
-        addOperatorButton("-", 3, 4, Color.RED, new OperandOperator(new Subtraction()));
-        addOperatorButton("+", 3, 5, Color.RED, new OperandOperator(new Addition()));
+        addOperatorButton("/", 3, 2, Color.RED, new OperandOperator(new Division(), state));
+        addOperatorButton("*", 3, 3, Color.RED, new OperandOperator(new Multiplication(), state));
+        addOperatorButton("-", 3, 4, Color.RED, new OperandOperator(new Subtraction(),state));
+        addOperatorButton("+", 3, 5, Color.RED, new OperandOperator(new Addition(),state));
 
         // Operateurs arithmetiques a un operande: 1/x, x^2, Sqrt
-        addOperatorButton("1/x", 4, 2, Color.RED, new FractionnalOperator());
-        addOperatorButton("x^2", 4, 3, Color.RED, new SquareOperator());
-        addOperatorButton("Sqrt", 4, 4, Color.RED, new SqrtOperator());
+        addOperatorButton("1/x", 4, 2, Color.RED, new FractionnalOperator(state));
+        addOperatorButton("x^2", 4, 3, Color.RED, new SquareOperator(state));
+        addOperatorButton("Sqrt", 4, 4, Color.RED, new SqrtOperator(state));
 
         // Entree: met la valeur courante sur le sommet de la pile
-        addOperatorButton("Ent", 4, 5, Color.RED, new EnterOperator());
+        addOperatorButton("Ent", 4, 5, Color.RED, new EnterOperator(state));
 
         // Affichage de la pile
         JLabel jLabel = new JLabel("Stack");

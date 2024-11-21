@@ -1,7 +1,10 @@
 package calculator;
 
 abstract class Operator {
-    protected State state = new State();
+    protected State state;
 
+    public Operator(State state) {
+      this.state = state;
+    }
     abstract void execute();
 }

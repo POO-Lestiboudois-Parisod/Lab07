@@ -2,7 +2,9 @@ package calculator;
 
 public class PointOperator extends Operator {
 
-    public PointOperator() {}
+    public PointOperator(State state) {
+        super(state);
+    }
     @Override
     public void execute() {
         state.appendToCurrentValue('.');

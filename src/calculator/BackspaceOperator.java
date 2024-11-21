@@ -1,8 +1,8 @@
 package calculator;
 
 public class BackspaceOperator extends Operator {
-    public BackspaceOperator() {
-
+    public BackspaceOperator(State state) {
+        super(state);
     }
 
     @Override

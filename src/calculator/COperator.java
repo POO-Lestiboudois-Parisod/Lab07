@@ -2,7 +2,9 @@ package calculator;
 
 public class COperator extends CEOperator {
 
-    public COperator() {}
+    public COperator(State state) {
+        super(state);
+    }
     @Override
     public void execute() {
         super.execute();
