@@ -14,7 +14,7 @@ public class OperandOperator extends Operator {
             state.setCurrentValue(operand.apply(a, b).toString());
             state.pushCurrentValue();
         } else {
-            state.setError("Erreur d'addition");
+            state.setError("Erreur");
         }
     }
 }

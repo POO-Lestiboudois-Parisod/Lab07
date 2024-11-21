@@ -1,11 +1,12 @@
 package calculator;
 
-public class MSOperator extends Operator {
+public class MSOperator extends MemoryOperator {
 
     public MSOperator() {}
     @Override
     void execute() {
-    //TODO
+        super.setMemory(Double.parseDouble(state.getCurrentValue()));
+        //state.clearCurrentValue();
 
     }
 }

@@ -12,7 +12,7 @@ public class SquareOperator extends Operator {
             state.pushCurrentValue();
         }
         else {
-            state.setError("Erreur d'addition");
+            state.setError("Erreur");
         }
     }
 
