@@ -9,6 +9,9 @@ public class OperandOperator extends Operator {
     @Override
     public void execute() {
         if (state.hasError()) return;
+        if(!state.getCurrentValue().equals("0")) {
+            state.pushCurrentValue();
+        }
         Double b = state.popFromStack();
         Double a = state.popFromStack();
         if (a != null && b != null) {

@@ -7,6 +7,9 @@ public class SquareOperator extends Operator {
     @Override
     public void execute() {
         if (state.hasError()) return;
+        if(!state.getCurrentValue().equals("0")) {
+            state.pushCurrentValue();
+        }
         Double a = state.popFromStack();
         if(a != null){
             Double b = a*a;
