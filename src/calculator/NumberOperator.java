@@ -11,6 +11,6 @@ public class NumberOperator extends Operator {
 
     @Override
     public void execute() {
-        state.appendToCurrentValue((char) value);
+        state.appendToCurrentValue((char) (value + 48));    // 48 is the ASCII code for '0'
     }
 }

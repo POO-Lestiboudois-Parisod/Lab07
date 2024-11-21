@@ -3,14 +3,12 @@ package calculator;
 import util.Stack;
 
 public class State {
-    private Stack<Double> stack;
-    private String currentValue;
+    private final Stack<Double> stack = new Stack<>();
+    private String currentValue = "0";
     private boolean error;
 
 
     public State() {
-        stack = new Stack<>();
-        currentValue = "0";
         error = false;
     }
 
@@ -23,6 +21,7 @@ public class State {
         } else {
             currentValue += c;
         }
+        System.out.println("currentValue: " + currentValue);
     }
 
     public void backspace() {
