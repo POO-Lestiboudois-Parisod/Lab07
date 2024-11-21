@@ -7,7 +7,7 @@ public class CEOperator extends Operator {
     }
 
     @Override
-    void execute() {
+    public void execute() {
         if(state.hasError()){
             state.resetError();
         }

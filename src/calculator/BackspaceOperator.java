@@ -6,7 +6,7 @@ public class BackspaceOperator extends Operator {
     }
 
     @Override
-    void execute() {
+    public void execute() {
        state.backspace();
     }
 }

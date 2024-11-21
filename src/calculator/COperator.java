@@ -4,7 +4,7 @@ public class COperator extends CEOperator {
 
     public COperator() {}
     @Override
-    void execute() {
+    public void execute() {
         super.execute();
         state.clearStack();
     }

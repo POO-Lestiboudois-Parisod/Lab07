@@ -4,7 +4,7 @@ public class EnterOperator extends Operator {
    public EnterOperator() {}
 
     @Override
-    void execute() {
+    public void execute() {
         state.pushCurrentValue();
     }
 }

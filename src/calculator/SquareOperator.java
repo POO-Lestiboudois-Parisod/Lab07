@@ -3,7 +3,7 @@ package calculator;
 public class SquareOperator extends Operator {
     public SquareOperator() {}
     @Override
-    void execute() {
+    public void execute() {
         if (state.hasError()) return;
         Double a = state.popFromStack();
         if(a != null){

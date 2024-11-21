@@ -6,7 +6,7 @@ public class OperandOperator extends Operator {
         this.operand = operand;
     }
     @Override
-    void execute() {
+    public void execute() {
         if (state.hasError()) return;
         Double b = state.popFromStack();
         Double a = state.popFromStack();

@@ -5,7 +5,7 @@ public class MemoryOperator extends Operator {
 
     public MemoryOperator() {}
     @Override
-    void execute() {
+    public void execute() {
     }
 
     public Double getMemory() {

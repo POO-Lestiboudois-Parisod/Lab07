@@ -4,7 +4,7 @@ public class PointOperator extends Operator {
 
     public PointOperator() {}
     @Override
-    void execute() {
+    public void execute() {
         state.appendToCurrentValue('.');
     }
 }
