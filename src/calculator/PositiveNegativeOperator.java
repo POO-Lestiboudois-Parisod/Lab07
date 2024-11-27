@@ -26,7 +26,7 @@ public class PositiveNegativeOperator extends Operator {
      */
     @Override
     public void execute() {
-        if(state.getCurrentValue().indexOf(0) == '-'){
+        if(state.getCurrentValue().charAt(0) == '-'){
             state.negativeToPositive();
         }
         else{

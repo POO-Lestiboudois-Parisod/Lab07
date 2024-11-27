@@ -259,10 +259,14 @@
     \addcontentsline{toc}{subsection}{Stack}
         la classe Stack\verb|<T>| est indispensable au bon fonctionnnement de la calculatrice. C'est en effet l'élément qui
     sert à stocker toutes les valeurs entrées par l'utilisateur et l'endroit d'où les valeurs sont tirées pour être par la suite traitées (calculées).
-
+    \newline Ayant nous-même créé la stack, nous avons décidé de créer une classe Node, représentant les éléments présents dans la Stack.
+    La Stack en elle-même représente alors une chaîne, permettant de contrôler l'ordre d'arrivée et de sortie des éléments.
 
     \subsection*{State et Operator}
-        \addcontentsline{toc}{subsection}{State et Operator}
+    \addcontentsline{toc}{subsection}{State et Operator}
+        la classe State est celle qui centralise toutes les informations liées à la calculatrice. Elle prend comme seul attribut
+    une instance de la classe Stack. La classe State renvoie les données qui seront affichées par la calculatrice, données qui
+    sont modifiées par les instances des objets de type Operator.
 
 
 
@@ -279,5 +283,10 @@
 %%%%%%%%%%%%%%%%%%%%
     \section*{Conclusion}
     \addcontentsline{toc}{section}{Conclusion}
+        Nos deux programmes/calculatrices marchent tel que nous le souhaitons. Nous avons grâce à ce laboratoire pu apprendre
+    comment fonctionne une architecture MVC et avons pu mettre en pratique notre code dans deux contextes différents, une fois sur
+    l'interface graphique et la seconde fois dans l'extension, en mode console. \newline Nous avons ainsi que tout code bien construit
+    peut être réutiliser dans plusieurs contextes différents.
+
 \end{document}
 

@@ -153,7 +153,7 @@ public class State {
      * Si la valeur est déjà positive, rien n'est fait.
      */
     public void negativeToPositive() {
-        currentValue = currentValue.substring(1, currentValue.length() - 1);
+        currentValue = currentValue.substring(1, currentValue.length());
     }
 
     /**
