@@ -45,7 +45,6 @@ pourquoi nous les avons choisies:
 
 Voici le listing de notre code:
 
-![Code](ListingCode.pdf)
 
 ## Tests effectués
 
