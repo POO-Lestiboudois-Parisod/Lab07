@@ -1,3 +1,8 @@
+/**
+ * @Author :  Maxime Lestiboudois
+ * @Author :  Nathan Parisod
+ */
+
 package calculator;
 
 import util.Stack;

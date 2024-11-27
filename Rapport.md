@@ -1,9 +1,10 @@
 /**
+
 * @file Rapport.md
 * @brief Rapport du laboratoire 07 du cours de POO
 * @Author Parisod Nathan et Maxime Lestiboudois
 * @date 27/11/2024
-*/
+  */
 
 # POO - Lab07 - Calculatrice
 
@@ -29,7 +30,7 @@ Voici notre schéma le schéma UML complété selon l'implémentation de notre c
 
 ## Choix de conceptions
 
-Lors de ce laboratoire, nous avons eus plusieurs idées pour l'implémentation du code. Voici certaines d'entres-elles et
+Lors de ce laboratoire, nous avons eu plusieurs idées pour l'implémentation du code. Voici certaines d'entres-elles et
 pourquoi nous les avons choisies:
 
 ### Problème 1
@@ -39,6 +40,12 @@ pourquoi nous les avons choisies:
 ### Problème 3
 
 ## Listing de notre code
+
+//TODO:
+
+Voici le listing de notre code:
+
+![Code](ListingCode.pdf)
 
 ## Tests effectués
 
