@@ -2,8 +2,8 @@
  * Représente un opérateur de suppression dans une calculatrice.
  * Cet opérateur permet de supprimer le dernier caractère saisi dans l'état actuel.
  *
- * @Author :  Maxime Lestiboudois
- * @Author :  Nathan Parisod
+ * @Author : Maxime Lestiboudois
+ * @Author : Nathan Parisod
  * @date : 27/11/2024
  */
 package calculator;
