@@ -35,6 +35,10 @@
 
     \section*{Introduction}
     \addcontentsline{toc}{section}{Introduction}
+    Dans ce laboratoire, nous avons implémenté la logique d'une calculatrice utilisant la notation polonaise inversée.
+    L'interface nous étant déjà fournie, nous nous sommes concentrés sur l'aspect fonctionnel de la calculatrice.
+    \newline Nous avons également implémenter une extension de notre calculatrice afin de pouvoir l'utiliser directement
+    dans un terminal.
 %%%%%%%%%%%%%%%%%%%%
 %Cahier des charges%
 %%%%%%%%%%%%%%%%%%%%
@@ -201,18 +205,45 @@
 %%%%%%%%%%%%%%%%%%%%
     \section*{Choix de conception}
     \addcontentsline{toc}{section}{Choix de conception}
-        \subsection*{Choix 1}
-        \addcontentsline{toc}{subsection}{Choix 1}
+        \subsection*{Choix 1 - Les opérateurs}
+        \addcontentsline{toc}{subsection}{Choix 1 - Les opérateurs}
+            Nous avons reçu un dossier "starter" fourni par le corps professoral. Dans ce dossier, nous avons trouvé le
+    fichier Operator, contenant la classe abstraite Operator, qui nous a servit de base pour construire tous les opérateurs (fonctionnalités des boutons) de notre
+    calculatrice.
+    \newline Nos opérateurs sont tous, sans exception, des classes enfants de la classe abstraite Operator, elles redéfinissent
+    donc toutes la méthode abstraite execute() de la super-classe.
+    Nous avons choisi que chaque opérateur, excepté les opérateurs d'opérations arithmétiques, serait un enfant direct de la
+    super-classe Operator.
+    \newline
+    Par ailleurs, chaque classe-enfant ne comporte aucun attribut, excepté les classe NumberOperator et OperantOperator.
+   NumberOperator possède un attribut privé et final. Ce choix nous permet de ne pas redéfinir une nouvelle classe pour chaque
+    chiffre, ces derniers étant définis lors de l'instanciation de l'objet via le constructeur.
+    \newline Nous discuterons de la classe Operand Operator dans le point suivant.
 
-        \subsection*{Choix 2}
-        \addcontentsline{toc}{subsection}{Choix 2}
+        \subsection*{Choix 2 - Opérations arithmétiques}
+        \addcontentsline{toc}{subsection}{Choix 2 - Opérations arithmétiques}
 
-        \subsection*{Choix 3}
-        \addcontentsline{toc}{subsection}{Choix 3}
+        \subsection*{Choix 3 - Gestion d'écriture et de mémoire}
+        \addcontentsline{toc}{subsection}{Choix 3 - Gestion d'écriture et de mémoire}
 
+        \subsection*{Choix 4 - State et Operator}
+        \addcontentsline{toc}{subsection}{Choix 4 - State et Operator}
+
+
+        \subsection*{Choix 5 - Stack}
+        \addcontentsline{toc}{subsection}{Choix 5 - Stack}
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+% Tests effectués %
+%%%%%%%%%%%%%%%%%%%%
     \section*{Tests effectués}
     \addcontentsline{toc}{section}{Tests effectués}
 
+%%%%%%%%%%%%%%%%%%%%
+%    Conclusion    %
+%%%%%%%%%%%%%%%%%%%%
     \section*{Conclusion}
     \addcontentsline{toc}{section}{Conclusion}
 \end{document}
