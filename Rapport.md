@@ -1,10 +1,10 @@
-/**
 
-* @file Rapport.md
-* @brief Rapport du laboratoire 07 du cours de POO
-* @Author Parisod Nathan et Maxime Lestiboudois
-* @date 27/11/2024
-  */
+
+>@file Rapport.md </br>
+>@brief Rapport du laboratoire 07 du cours de POO </br>
+>@Author Parisod Nathan et Maxime Lestiboudois </br>
+>@date 27/11/2024
+ 
 
 # POO - Lab07 - Calculatrice
 
