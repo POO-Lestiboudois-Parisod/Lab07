@@ -13,7 +13,6 @@ public class State {
     }
 
     public void appendToCurrentValue(char c) {
-        System.out.println("test current_value: "+currentValue.equals("0"));
 
         if (error) {
             resetError();
@@ -23,8 +22,7 @@ public class State {
         } else {
             currentValue += c;
         }
-        System.out.println("currentValue: " + currentValue);
-    }
+   }
 
     public void backspace() {
         if (!error && currentValue.length() > 1) {

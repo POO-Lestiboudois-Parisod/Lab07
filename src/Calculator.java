@@ -14,7 +14,7 @@ public class Calculator {
     public void start(){
         boolean stay = true;
         while(stay){
-            System.out.print(">");
+            System.out.print("> ");
             String input = scanner.nextLine().trim();
 
             if(input.equals("exit")){
@@ -59,6 +59,8 @@ public class Calculator {
                 case "c":
                     new COperator(state).execute();
                     break;
+                case "exit":
+                    return false;
                 default:
                     System.out.println("Opérateur inconnu");
                     return false;
@@ -68,7 +70,13 @@ public class Calculator {
     }
 
     private void displayState(){
-
+        if
+        (state.hasError()){
+            System.out.println("Error");
+        }
+        else{
+            System.out.println(state.getStack().toString());
+        }
     }
     private boolean isNumber(String input){
         try {
@@ -77,6 +85,10 @@ public class Calculator {
         } catch (NumberFormatException e) {
             return false;
         }
+    }
+
+    public static void main(String[] args){
+        new Calculator().start();
     }
 
 
