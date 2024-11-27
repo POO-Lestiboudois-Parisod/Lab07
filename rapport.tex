@@ -39,19 +39,20 @@
     L'interface nous étant déjà fournie, nous nous sommes concentrés sur l'aspect fonctionnel de la calculatrice.
     \newline Nous avons également implémenter une extension de notre calculatrice afin de pouvoir l'utiliser directement
     dans un terminal.
+
 %%%%%%%%%%%%%%%%%%%%
 %Cahier des charges%
 %%%%%%%%%%%%%%%%%%%%
     \section*{Cahier des charges}
     \addcontentsline{toc}{section}{Cahier des charges}
-        \subsection*{1. Objectif du Projet}
-        \addcontentsline{toc}{subsection}{1. Objectif du Projet}
+        \subsection*{Objectif du Projet}
+        \addcontentsline{toc}{subsection}{Objectif du Projet}
         Créer une calculatrice fonctionnant en notation polonaise inverse (Reverse Polish Notation - RPN). Elle doit inclure une interface graphique (GUI) et un mode console, réutilisant les mêmes classes et principes. Le projet doit suivre une architecture Modèle-Vue-Contrôleur (MVC).
 
-        \subsection*{2. Spécifications Fonctionnelles}
-        \addcontentsline{toc}{subsection}{2. Spécifications Fonctionnelles}
-            \subsubsection*{2.1 Interface Graphique (GUI)}
-            \addcontentsline{toc}{subsubsection}{2.1 Interface Graphique (GUI)}
+        \subsection*{Spécifications Fonctionnelles}
+        \addcontentsline{toc}{subsection}{Spécifications Fonctionnelles}
+            \subsubsection*{Interface Graphique (GUI)}
+            \addcontentsline{toc}{subsubsection}{Interface Graphique (GUI)}
                 \begin{itemize}
                     \item Implémenter une interface utilisateur dans la classe JCalculator.
                     \item Boutons requis :
@@ -80,8 +81,8 @@
 
                     \item Mise à jour de l'affichage après chaque opération via une méthode update().
                 \end{itemize}
-            \subsection*{2.2 Mode Console}
-            \addcontentsline{toc}{subsection}{2.2 Mode Console}
+            \subsubsection*{Mode Console}
+            \addcontentsline{toc}{subsubsection}{Mode Console}
                 \begin{itemize}
                     \item Développer une classe Calculator permettant une interaction textuelle.
                     \item Commandes utilisateur :
@@ -98,8 +99,8 @@
                     \end{itemize}
                 \end{itemize}
 
-            \subsection*{2.3 Gestion des Données et Opérations}
-            \addcontentsline{toc}{subsection}{2.3 Gestion des Données et Opérations}
+            \subsubsection*{Gestion des Données et Opérations}
+            \addcontentsline{toc}{subsubsection}{Gestion des Données et Opérations}
                 \begin{itemize}
                     \item Pile personnalisée (Stack) :
                     \begin{itemize}
@@ -123,10 +124,10 @@
                     \end{itemize}
                 \end{itemize}
 
-            \subsection*{3. Spécifications Techniques}
-            \addcontentsline{toc}{subsection}{3. Spécifications Techniques}
-                \subsubsection*{3.1 Architecture MVC}
-                \addcontentsline{toc}{subsubsection}{3.1 Architexture MVC}
+            \subsection*{Spécifications Techniques}
+            \addcontentsline{toc}{subsection}{Spécifications Techniques}
+                \subsubsection*{Architecture MVC}
+                \addcontentsline{toc}{subsubsection}{Architexture MVC}
                     \begin{itemize}
                         \item Modèle (State) :
                         \begin{itemize}
@@ -146,8 +147,8 @@
                             \item Appel de la méthode execute() d’un objet Operator.
                         \end{itemize}
                     \end{itemize}
-                \subsubsection*{3.2 Hiérarchie des Classes}
-                \addcontentsline{toc}{subsubsection}{3.2 Hiérarchie des Classes}
+                \subsubsection*{Hiérarchie des Classes}
+                \addcontentsline{toc}{subsubsection}{Hiérarchie des Classes}
                     \begin{itemize}
                         \item Classe générique Stack pour représenter une pile.
                         \item Classe State pour l'état interne.
@@ -167,16 +168,16 @@
                         \item Classe JCalculator pour l'interface graphique.
                         \item Classe Calculator pour le mode console.
                     \end{itemize}
-            \subsection*{4. Contraintes}
-            \addcontentsline{toc}{subsection}{4. Contraintes}
+            \subsection*{Contraintes}
+            \addcontentsline{toc}{subsection}{Contraintes}
                 \begin{itemize}
                     \item Aucune utilisation de switch ou de if pour sélectionner l'opération dans Operator.
                     \item Pas de propriétés statiques pour le stockage des données.
                     \item Le code doit être modulaire et réutilisable.
                     \item Respect des principes de conception objet.
                 \end{itemize}
-            \subsection*{5. Tests}
-            \addcontentsline{toc}{subsection}{5. Tests}
+            \subsection*{Tests}
+            \addcontentsline{toc}{subsection}{Tests}
                 \begin{itemize}
                     \item Élaborer une grille de tests couvrant :
                     \begin{itemize}
@@ -188,25 +189,28 @@
 
                     \item Inclure des cas limites et des tests d'intégration.
                 \end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%
 %%  Schéma UML  %%
 %%%%%%%%%%%%%%%%%%%%
     \section*{Schéma UML}
     \addcontentsline{toc}{section}{Schéma UML}
     \includegraphics[scale=0.3]{images/diagram}
+
 %%%%%%%%%%%%%%%%%%%%
 %%  Listing code  %%
 %%%%%%%%%%%%%%%%%%%%
     \section*{Listing du code}
     \addcontentsline{toc}{section}{Listing du code}
     %\includepdf[page=-, pagecommand={\thispagestyle{plain}}]{src.pdf}
+
 %%%%%%%%%%%%%%%%%%%%
 % Choix Conception %
 %%%%%%%%%%%%%%%%%%%%
     \section*{Choix de conception}
     \addcontentsline{toc}{section}{Choix de conception}
-        \subsection*{Choix 1 - Les opérateurs}
-        \addcontentsline{toc}{subsection}{Choix 1 - Les opérateurs}
+        \subsection*{Les opérateurs}
+        \addcontentsline{toc}{subsection}{Les opérateurs}
             Nous avons reçu un dossier "starter" fourni par le corps professoral. Dans ce dossier, nous avons trouvé le
     fichier Operator, contenant la classe abstraite Operator, qui nous a servit de base pour construire tous les opérateurs (fonctionnalités des boutons) de notre
     calculatrice.
@@ -216,25 +220,51 @@
     super-classe Operator.
     \newline
     Par ailleurs, chaque classe-enfant ne comporte aucun attribut, excepté les classe NumberOperator et OperantOperator.
-   NumberOperator possède un attribut privé et final. Ce choix nous permet de ne pas redéfinir une nouvelle classe pour chaque
+    NumberOperator possède un attribut privé et final. Ce choix nous permet de ne pas redéfinir une nouvelle classe pour chaque
     chiffre, ces derniers étant définis lors de l'instanciation de l'objet via le constructeur.
     \newline Nous discuterons de la classe Operand Operator dans le point suivant.
 
-        \subsection*{Choix 2 - Opérations arithmétiques}
-        \addcontentsline{toc}{subsection}{Choix 2 - Opérations arithmétiques}
+        \subsection*{Opérations arithmétiques}
+        \addcontentsline{toc}{subsection}{Opérations arithmétiques}
             Les opérations arithmétiques entre les différentes valeurs de la stack se font via la classe OperandOperaor.
-    \newline Cette classe prend comme attribut une instance de la classe Operation<T> (ici T est un objet de type Double).
-    La classe
+    \newline Cette classe prend comme attribut une instance de la classe Operation\verb|<T>| (ici T est un objet de type Double).
+    La classe Operation<T> est une classe publique abstraite qui implémente la méthode (abstraite également) apply(T a, T b).
+    L'appel à cette fonction depuis OperandOperator permet de traiter les opérations arithmétiques proposées par les classes
+    enfants de Operation.
+    \newline Parmi les classes enfants de Operation, nous avons choisi de n'implémenter que les classes suivantes:
+    \begin{itemize}
+        \item Addition
+        \item Subtraction
+        \item Multiplication
+        \item Division
+    \end{itemize}
+    Nous n'avons pas besoin de plus pour notre calculatrice, cependant nous gardons ainsi la possibilité d'implémenter d'autres
+    opérations utilisant deux opérandes de manière simple et optimisée.
 
-        \subsection*{Choix 3 - Gestion d'écriture et de mémoire}
-        \addcontentsline{toc}{subsection}{Choix 3 - Gestion d'écriture et de mémoire}
+        \subsection*{Gestion d'écriture et de mémoire}
+        \addcontentsline{toc}{subsection}{Gestion d'écriture et de mémoire}
+            Comme demandé dans le cahier des charges, notre calculatrice comprend un bouton "C", permettant d'effacer ce qui était
+    en train d'être écrit (classe CEOperator), ainsi qu'un bouton reprenant cette même fonctionnalité et supprimant par la même occasion le
+    contenu de la stack (pile) de la calculatrice (classe COperator). Afin d'éviter toute redondance de code, nous avons décidé que
+    la classe COperator serait une sous-classe de la classe CEOperator. Ainsi, un simple appel à la super méthode nous permet
+    d'accéder aux fonctionnalités de la super-classe CEOperator.
+    \newline Notre calculatrice implémente également une fonctionnalité mémoire avec les boutons MR et MS. MS permet de
+    sauver dans l'attribut memory de la classe State, un objet de type Double. Le bouton MR permet de récupérer la valeur
+    sauvée dans la mémoire. Ces deux fonctionnalités fonctionnement respectivement grâce aux classes MSOperator et MROperator.
+    \newline Nous avons choisi que lorsque la mémoire serait récupérée, la valeur contenue en mémoire ne serait pas affecter et resterait
+    la même. De même lorsque les boutons C ou CE seraient sélectionnés, la mémoire n'est pas affectée par l'exécution des autres
+    fonctionnalités.
 
-        \subsection*{Choix 4 - State et Operator}
-        \addcontentsline{toc}{subsection}{Choix 4 - State et Operator}
+    \subsection*{Stack}
+    \addcontentsline{toc}{subsection}{Stack}
+        la classe Stack\verb|<T>| est indispensable au bon fonctionnnement de la calculatrice. C'est en effet l'élément qui
+    sert à stocker toutes les valeurs entrées par l'utilisateur et l'endroit d'où les valeurs sont tirées pour être par la suite traitées (calculées).
 
 
-        \subsection*{Choix 5 - Stack}
-        \addcontentsline{toc}{subsection}{Choix 5 - Stack}
+    \subsection*{State et Operator}
+        \addcontentsline{toc}{subsection}{State et Operator}
+
+
 
 
 

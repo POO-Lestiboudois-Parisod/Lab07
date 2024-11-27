@@ -56,7 +56,10 @@ public class Calculator {
      */
     private boolean processInput(String input){
         if(isNumber(input)){
-            new NumberOperator(Integer.parseInt(input), state).execute();
+
+            for(char c : input.toCharArray()){
+                new NumberOperator(c - '0', state).execute();
+            }
             new EnterOperator(state).execute();
         }
         else {
@@ -117,7 +120,7 @@ public class Calculator {
      */
     private boolean isNumber(String input){
         try {
-            Integer.parseInt(input);
+            Double.parseDouble(input);
             return true;
         } catch (NumberFormatException e) {
             return false;
