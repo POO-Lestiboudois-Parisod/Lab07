@@ -3,8 +3,8 @@
  * Elle permet d'exécuter des opérations arithmétiques et des manipulations d'état
  * en saisissant des commandes textuelles.
  *
- * @Author :  Maxime Lestiboudois
- * @Author :  Nathan Parisod
+ * @Author : Maxime Lestiboudois
+ * @Author : Nathan Parisod
  * @date : 27/11/2024
  */
 import calculator.*;
