@@ -202,7 +202,11 @@
 %%%%%%%%%%%%%%%%%%%%
     \section*{Listing du code}
     \addcontentsline{toc}{section}{Listing du code}
-    %\includepdf[page=-, pagecommand={\thispagestyle{plain}}]{src.pdf}
+    \includepdf[page=-, pagecommand={\thispagestyle{plain}}]{ListingCode.pdf}
+    \includepdf[page=-, pagecommand={\thispagestyle{plain}}]{ListingCode2.pdf}
+    \includepdf[page=-, pagecommand={\thispagestyle{plain}}]{ListingCode3.pdf}
+    \includepdf[page=-, pagecommand={\thispagestyle{plain}}]{ListingCode4.pdf}
+    \includepdf[page=-, pagecommand={\thispagestyle{plain}}]{ListingCode5.pdf}
 
 %%%%%%%%%%%%%%%%%%%%
 % Choix Conception %
@@ -257,14 +261,14 @@
 
     \subsection*{Stack}
     \addcontentsline{toc}{subsection}{Stack}
-        la classe Stack\verb|<T>| est indispensable au bon fonctionnnement de la calculatrice. C'est en effet l'élément qui
+        La classe Stack\verb|<T>| est indispensable au bon fonctionnnement de la calculatrice. C'est en effet l'élément qui
     sert à stocker toutes les valeurs entrées par l'utilisateur et l'endroit d'où les valeurs sont tirées pour être par la suite traitées (calculées).
     \newline Ayant nous-même créé la stack, nous avons décidé de créer une classe Node, représentant les éléments présents dans la Stack.
     La Stack en elle-même représente alors une chaîne, permettant de contrôler l'ordre d'arrivée et de sortie des éléments.
 
     \subsection*{State et Operator}
     \addcontentsline{toc}{subsection}{State et Operator}
-        la classe State est celle qui centralise toutes les informations liées à la calculatrice. Elle prend comme seul attribut
+        La classe State est celle qui centralise toutes les informations liées à la calculatrice. Elle prend comme seul attribut
     une instance de la classe Stack. La classe State renvoie les données qui seront affichées par la calculatrice, données qui
     sont modifiées par les instances des objets de type Operator.
 
@@ -284,8 +288,9 @@
     mode graphique. C'est à dire que nous avons testé les mêmes opérations dans les deux modes pour vérifier que les
     résultats étaient les mêmes, une fois en appelant les méthodes de la classe Calculator et une fois en simulant des
     cliques sur les boutons de la calculatrice graphique. Pour la partie graphique, nous avons implémenté une classe
-    JCalculatorTestUtils qui permet de simuler des cliques sur les boutons de la calculatrice graphique.
+    JCalculatorTestUtils qui possède les méthodes nécessaire à la simulation de cliques sur les boutons de la calculatrice.
     \newline
+    Tous nos tests fonctionnent correctement et nous n'avons pas rencontré de problèmes majeurs lors de l'implémentation.
 
 
 %%%%%%%%%%%%%%%%%%%%
@@ -293,10 +298,11 @@
 %%%%%%%%%%%%%%%%%%%%
     \section*{Conclusion}
     \addcontentsline{toc}{section}{Conclusion}
-        Nos deux programmes/calculatrices marchent tel que nous le souhaitons. Nous avons grâce à ce laboratoire pu apprendre
-    comment fonctionne une architecture MVC et avons pu mettre en pratique notre code dans deux contextes différents, une fois sur
-    l'interface graphique et la seconde fois dans l'extension, en mode console. \newline Nous avons ainsi appris que tout code bien construit
-    peut être réutiliser dans plusieurs contextes différents.
+        Nos deux programmes/calculatrices marchent tel que nous le souhaitons vu que les tests effectués se comportent
+        comme prévus. Nous avons grâce à ce laboratoire pu apprendre comment fonctionne une architecture MVC et avons pu
+        mettre en pratique notre code dans deux contextes différents, une fois sur l'interface graphique et la seconde
+        fois dans l'extension, en mode console. \newline Nous avons ainsi appris que tout code bien construit peut être
+        réutiliser dans plusieurs contextes différents.
 
 \end{document}
 
