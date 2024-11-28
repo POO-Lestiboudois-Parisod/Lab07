@@ -69,7 +69,7 @@ public class Calculator {
                     new OperandOperator(new Addition(),state).execute();
                     break;
                 case "-":
-                    new OperandOperator(new Subtraction(), state).execute();
+                    new OperandOperator(new Substraction(), state).execute();
                     break;
                 case "*":
                     new OperandOperator(new Multiplication(), state).execute();
