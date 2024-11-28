@@ -13,8 +13,8 @@ public class StackTest {
         assert stack.toArray()[1].equals(1.0) : "Erreur : l'élément suivant devrait être 1.0";
 
         // Test de la méthode pop
-        assert stack.pop() == 2.0 : "Erreur : le dépilement devrait retourner 2.0";
-        assert stack.pop() == 1.0 : "Erreur : le dépilement devrait retourner 1.0";
+        assert stack.pop().equals(2.0) : "Erreur : l'élément retiré devrait être 2.0";
+        assert stack.pop().equals(1.0) : "Erreur : l'élément retiré devrait être 1.0";
 
         // Test de la méthode isEmpty
         assert stack.isEmpty() : "Erreur : la pile devrait être vide";

@@ -11,7 +11,7 @@
 
 package calculator;
 
-public class Subtraction  extends Operation<Double>{
+public class Substraction extends Operation<Double>{
 
     /**
      * Applique l'opération de soustraction sur deux nombres de type {@code Double}.

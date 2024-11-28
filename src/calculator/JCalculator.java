@@ -11,8 +11,6 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -120,7 +118,7 @@ public class JCalculator extends JFrame {
         // Operateurs arithmetiques a deux operandes: /, *, -, +
         addOperatorButton("/", 3, 2, Color.RED, new OperandOperator(new Division(), state));
         addOperatorButton("*", 3, 3, Color.RED, new OperandOperator(new Multiplication(), state));
-        addOperatorButton("-", 3, 4, Color.RED, new OperandOperator(new Subtraction(),state));
+        addOperatorButton("-", 3, 4, Color.RED, new OperandOperator(new Substraction(),state));
         addOperatorButton("+", 3, 5, Color.RED, new OperandOperator(new Addition(),state));
 
         // Operateurs arithmetiques a un operande: 1/x, x^2, Sqrt
